@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.christoffer.mobiletest.StartBTGame">
+
+    <TextView
+        android:id="@+id/rules"
+        android:layout_width="344dp"
+        android:layout_height="wrap_content"
+        android:text="Welkommen til et trådløst spil af Dilema. For at spile i trådlås mode skal en spiler holde spilet og resten skal melde sig ind. for at holde spilet skal du trykke på hold spil og derefter vælge de spiler/enheder du vil have med i spilet og derefter trykke start spil. For at melde dig in skal du bare trykke meld ind og vent på at du bliver valgt."
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/Hold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <Button
+        android:id="@+id/Hold"
+        android:layout_width="344dp"
+        android:layout_height="wrap_content"
+        android:onClick="hostGame"
+        android:text="Hold Spil"
+        app:layout_constraintBottom_toTopOf="@+id/Meld"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rules" />
+
+    <Button
+        android:id="@+id/Meld"
+        android:layout_width="344dp"
+        android:layout_height="wrap_content"
+        android:onClick="joinGame"
+        android:text="Meld ind"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Hold" />
+</android.support.constraint.ConstraintLayout>
